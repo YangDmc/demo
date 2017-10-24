@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        p,a{
+            color:white;
+        }
+        img{
+            width:400px;
+            height:300px;
+        }
+    </style>
+</head>
+<body>
+  <p>点击下方链接查看图片</p>
+  <ul>
+      <li><a href="../XX.jpg" onclick="showPic(this);return false">第一张</a></li>
+      <li><a href="../XX.jpg" onclick="showPic(this);return false">第二张</a></li>
+      <li><a href="../XX.jpg" onclick="showPic(this);return false">第三张</a></li>
+      <img id="placeholder" src="../4.png" alt="占位符">
+  </ul>
+<script>
+   function showPic(whichPic){
+       var placeholder=document.getElementById("placeholder");
+       var source=whichPic.getAttribute("href");
+       placeholder.setAttribute("src",source);
+   }
+</script>
+</body>
+</html>
